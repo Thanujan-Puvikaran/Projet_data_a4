@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_restplus import Api
 from blueprints.documented_endpoints.dataset import namespace as dataset_ns
-
+from blueprints.documented_endpoints.analyse_exploratoire import namespace as image_ns
 
 blueprint = Blueprint("api", __name__, url_prefix="/v1")
 
@@ -14,3 +14,4 @@ api_extension = Api(
 )
 
 api_extension.add_namespace(dataset_ns)
+api_extension.add_namespace(image_ns)
