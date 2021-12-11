@@ -3,7 +3,7 @@ from flask_restplus import Namespace, Resource
 import os
 
 namespace = Namespace(
-    "filtering_phase", "Filtering phase related endpoints, with plots"
+    "filtering", "Filtering phase in which we have the pre-processed data with plots"
 )
 
 

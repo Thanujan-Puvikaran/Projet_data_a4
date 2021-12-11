@@ -1,4 +1,4 @@
-# **Projet_data_a4**
+# **PROJECT DATA A4**
 
 ### **- The command that you must use if you want to run the API:**
 - pip install -r requirements.txt
