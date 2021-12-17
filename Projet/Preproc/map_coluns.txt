@@ -1,4 +1,4 @@
-X01 net profit / total assets (ROA)
+X01 net profit / total assets
 X02 total liabilities / total assets
 X03 working capital / total assets
 X04 current assets / short-term liabilities
