@@ -16,10 +16,14 @@
 
 ##### - You can now use any of the following routes !
     dataset:
-        - get/dataset/columns
+        - get/dataset/base/columns
+        - get/dataset/processed/columns
     filtering:
-        - get/filtering/boxplot
+        - get/filtering/boxplot/addiction/{variable}
+        - get/filtering/boxplot/drugs/{variable}
     model:
-        - post/model
+        - post/model/knn
+        - get/model/knn/confusion_matrix
+        - get/model/elbow
 ##### You can access to the documentation through [doc](doc.md)
 ![Hope you like it](https://lms.univ-cotedazur.fr/2019/pluginfile.php/132414/course/overviewfiles/Data%20analysis%201.png)
