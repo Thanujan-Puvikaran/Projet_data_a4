@@ -206,6 +206,15 @@ class impulsive_drugs(Resource):
         return send_file(TRUE_PATH, cache_timeout=2)
 
 
+@namespace.route("/boxplot/drugs/ss")
+class ss_drugs(Resource):
+    @namespace.response(200, "Success")
+    def get(self):
+        """ Get the boxplot for ss in function of drugs """
+        TRUE_PATH = find_file(fullname="SS_drugs", extension=".png", path="../image/",)
+        return send_file(TRUE_PATH, cache_timeout=2)
+
+
 @namespace.route("/boxplot/addiction/number_drug")
 class number_drug(Resource):
     @namespace.response(200, "Success")

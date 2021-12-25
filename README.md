@@ -19,8 +19,25 @@
         - get/dataset/base/columns
         - get/dataset/processed/columns
     filtering:
-        - get/filtering/boxplot/addiction/{variable}
-        - get/filtering/boxplot/drugs/{variable}
+        - get/filtering/boxplot/addiction/education
+        - get/filtering/boxplot/addiction/age
+        - get/filtering/boxplot/addiction/ethnicity
+        - get/filtering/boxplot/addiction/gender
+        - get/filtering/boxplot/addiction/escore
+        - get/filtering/boxplot/addiction/nscore
+        - get/filtering/boxplot/addiction/oscore
+        - get/filtering/boxplot/addiction/cscore
+        - get/filtering/boxplot/addiction/ascore
+        - get/filtering/boxplot/addiction/impulsiveness
+        - get/filtering/boxplot/addiction/number_drug
+        - get/filtering/boxplot/addiction/ss
+        - get/filtering/boxplot/drugs/nscore
+        - get/filtering/boxplot/drugs/escore
+        - get/filtering/boxplot/drugs/oscore
+        - get/filtering/boxplot/drugs/cscore
+        - get/filtering/boxplot/drugs/ascore
+        - get/filtering/boxplot/drugs/impulsiveness
+        - get/filtering/boxplot/drugs/ss
     model:
         - post/model/knn
         - get/model/knn/confusion_matrix
