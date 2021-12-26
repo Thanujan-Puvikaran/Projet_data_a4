@@ -68,11 +68,29 @@ For the model, there are multiple values in the payload. Here are the values and
         - 9 if he/she has a doctorate degree
     - the default value is 1
 - Nscore
+    - it is an integer
+    - the possible value range from 12 to 60
+    - if it is out of range, the default value is one of the extreme
 - Escore
+    - it is an integer
+    - the possible value range from 16 to 59
+    - if it is out of range, the default value is one of the extreme
 - Oscore
+    - it is an integer
+    - the possible value range from 24 to 60
+    - if it is out of range, the default value is one of the extreme
 - Ascore
+    - it is an integer
+    - the possible value range from 12 to 60
+    - if it is out of range, the default value is one of the extreme
 - Cscore
+    - it is an integer
+    - the possible value range from 17 to 59
+    - if it is out of range, the default value is one of the extreme
 - SS
+    - it is an integer
+    - the possible value range from 71 to 249, but if possible try to give a value within this list (71, 87, 103, 132, 169, 210, 211, 219, 223, 249)
+    - if it is out of range, the default value is one of the extreme
 - Amphet
     - it is a boolean
     - the possible values are true or false

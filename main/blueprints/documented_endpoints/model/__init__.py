@@ -31,32 +31,32 @@ payload = namespace.model(
                         9 if he/she has a doctorate degree""",
             required=False,
         ),
-        "Nscore": fields.Float(
+        "Nscore": fields.Integer(
             description="""Nscore: Neurotism score related to whether the patient has these characteristic: Anxiety, Angry/Hostility, Depression, Timidity, Impulsivity, Vulnerability 
             \nMark each of those from 0 to 10 and sum them before plugging them into the payload (the range of value is 12-60)""",
             required=False,
         ),
-        "Escore": fields.Float(
+        "Escore": fields.Integer(
             description="""Escore: Extraversion level realted to Warmth/kindness, Gregariousness, Assertiveness, Activity, Excitment Seeking, Positive Emotion
             \nMark each of those from 0 to 10 and sum them before plugging them into the payload (the range of value is 16-59)""",
             required=False,
         ),
-        "Oscore": fields.Float(
+        "Oscore": fields.Integer(
             description="""Oscore: Open mindness level related to Fantasy, Aesthetics, Feelings, Actions, Ideas, Values/liberalism
             \nMark each of those from 0 to 10 and sum them before plugging them into the payload (the range of value is 24-60)""",
             required=False,
         ),
-        "Ascore": fields.Float(
+        "Ascore": fields.Integer(
             description="""Ascore: Agreeableness level related to Trust, Straightforwardness, Altruism, Compliance, Modesty, Tendermindedness
             \nMark each of those from 0 to 10 and sum them before plugging them into the payload (the range of value is 12-60)""",
             required=False,
         ),
-        "Cscore": fields.Float(
+        "Cscore": fields.Integer(
             description="""Cscore: Conscientiousness related to Competence, Order, Dutifulness, Achievement Striving, Self-Discipline, Deliberation
             \nMark each of those from 0 to 10 and sum them before plugging them into the payload (the range of value is 17-59)""",
             required=False,
         ),
-        "SS": fields.Float(
+        "SS": fields.Integer(
             description="""SS: Barrat Impulsiveness Test \nFactors: Attention, Cognitvity, Motor, Perseverance, Self-Control.
              \n(the range of value is 71-249)""",
             required=False,
