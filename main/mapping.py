@@ -12,6 +12,12 @@ class defaultValue:
         self.gender()
         self.age()
         self.education()
+        self.nscore()
+        self.escore()
+        self.oscore()
+        self.ascore()
+        self.cscore()
+        self.ss()
 
     def default(self, payload, flag=False):
         if flag:
@@ -127,6 +133,8 @@ class defaultValue:
             "59": 2.82196,
             "60": 3.27393,
         }
+        key = self.value["Nscore"]
+        self.value["Nscore"] = self.check(nsc, key)
 
     def escore(self):
         esc = {
@@ -173,6 +181,8 @@ class defaultValue:
             "58": 3.00537,
             "59": 3.27393,
         }
+        key = self.value["Escore"]
+        self.value["Escore"] = self.check(esc, key)
 
     def oscore(self):
         osc = {
@@ -212,6 +222,9 @@ class defaultValue:
             "59": 2.44904,
             "60": 2.90161,
         }
+        key = self.value["Oscore"]
+        self.value["Oscore"] = self.check(osc, key)
+        print(self.value)
 
     def ascore(self):
         asc = {
@@ -257,6 +270,8 @@ class defaultValue:
             "59": 3.15735,
             "60": 3.46436,
         }
+        key = self.value["Ascore"]
+        self.value["Ascore"] = self.check(asc, key)
 
     def cscore(self):
         csc = {
@@ -302,19 +317,46 @@ class defaultValue:
             "57": 3.00537,
             "59": 3.46436,
         }
+        key = self.value["Cscore"]
+        self.value["Cscore"] = self.check(csc, key)
 
     def ss(self):
         ss = {
             "71": -2.07848,
             "87": -1.54858,
+            "103": 1.92173,
             "132": -1.18084,
             "169": -0.84637,
-            "211": -0.52593,
-            "223": -0.21575,
-            "219": 0.07987,
-            "249": 0.40148,
-            "211": 0.76540,
             "210": 1.22470,
-            "103": 1.92173,
+            "211": -0.52593,
+            "219": 0.07987,
+            "223": -0.21575,
+            "249": 0.40148,
         }
+        key = self.value["SS"]
+        self.value["SS"] = self.check(ss, key)
+
+    def check(self, dic, key):
+        lstkey = list(dic.keys())
+        if key < int(lstkey[0]):
+            return dic[str(lstkey[0])]
+        if key > int(lstkey[len(lstkey) - 1]):
+            return dic[str(lstkey[len(lstkey) - 1])]
+        if str(key) in lstkey:
+            return dic[str(key)]
+        i = key + 1
+        j = key - 1
+        flag = False
+        while not flag:
+            if str(i) in lstkey:
+                key = i
+                break
+            elif str(j) in lstkey:
+                key = j
+                break
+            else:
+                pass
+            i += 1
+            j -= 1
+        return dic[str(key)]
 
