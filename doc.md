@@ -35,7 +35,7 @@ For each personality here are the description:
 
 The elbow endpoint return the plot showing which k we have choose for the Knn method.
 The confusion_matrix endpoint is showing the accuracy of our model.
-The post knn will help you predict whether the given person is addicted or not and to which level he/she is.
+The post knn will help you predict whether the given person is addicted or not and to which level he/she is. You have pretty much the same for the svc model.
 
 ![MODEL](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/thanujan/image/model.png?raw=false)
 

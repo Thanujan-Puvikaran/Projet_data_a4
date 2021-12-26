@@ -42,5 +42,7 @@
         - post/model/knn
         - get/model/knn/confusion_matrix
         - get/model/elbow
+        - post/model/svc
+        - get/model/svc/confusion_matrix
 ##### You can access to the documentation through [doc](doc.md)
 ![Hope you like it](https://lms.univ-cotedazur.fr/2019/pluginfile.php/132414/course/overviewfiles/Data%20analysis%201.png)
