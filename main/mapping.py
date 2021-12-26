@@ -74,3 +74,21 @@ class defaultValue:
             self.value["Education"] = 1.98437
         else:
             self.value["Education"] = self.DEFAULTVALUE["Education"]
+
+    def nscore(self):
+        pass
+
+    def escore(self):
+        pass
+
+    def oscore(self):
+        pass
+
+    def ascore(self):
+        pass
+
+    def cscore(self):
+        pass
+
+    def ss(self):
+        pass

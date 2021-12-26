@@ -106,7 +106,6 @@ class model(Resource):
             knn_filename = "../model/knn.pkl"
             with open(knn_filename, "rb") as file:
                 knn_model = pickle.load(file)
-            print("The model descripton: ", knn_model)
             output = {"response": output_payload.value}
             # output = {"response": output_payload.value, "model": knn_model}
             # payload = defaultValue(payload=namespace.payload, flag=True)

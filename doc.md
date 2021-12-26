@@ -12,7 +12,27 @@ The enpoints above are returning the column's names before and after processing 
 The endpoints above are returning differents plots that are important ine processing step. We have boxplots that are showing the importance of a variable according to the target variable which is the level of addiction. We also have a pieplot showing the target composition.
 
 
+For each model, you can see 3 or more endpoints. For each model there is the post endpoint where you can test the model yourself, the confusion_matrix endpoint where you can read the confusion matrix plot and other plots depending on the model. To understand the different scores you can go to this [page](https://en.wikipedia.org/wiki/Revised_NEO_Personality_Inventory?fbclid=IwAR3E5_5whyAQGpsvxHmNtFuPYJGYA6YU9KYT4VodBh8RkTjpwy28owNUWOc)
+
+
+
+
+The meaning of each score:
+| Scores        | Corresponding personality|
+| ------------- | ------------------------ |
+| Nscore        | Neuroticism              |
+| Escore        | Extraversion             |
+| Oscore        | Openness to experience   |
+| Ascore        | Openness to experience   |
+| Cscore        | Conscientiousness        |
+
+For each personality here are the description:
+
+![score](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/thanujan/image/score.png?raw=false)
+
+
 ![MODEL](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/thanujan/image/model.png?raw=false)
+
 
 The elbow endpoint return the plot showing which k we have choose for the Knn method.
 The confusion_matrix endpoint is showing the accuracy of our model.
