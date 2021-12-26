@@ -40,15 +40,17 @@ The post knn will help you predict whether the given person is addicted or not a
 ![MODEL](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/thanujan/image/model.png?raw=false)
 
 
+```diff
+- Among the models, the best one is SVC. Indeed if you use the get/model/knn/confusion_matrix and get/model/svc/confusion_matrix you can see that svc is more accurate.
+```
+#### For each model, here are some information that you must have in mind before using them:
 
-#### Among the models, the best one is SVC. Indeed if you use the get/model/knn/confusion_matrix and get/model/svc/confusion_matrix you can see that svc is more accurate.
-
-##### For each model, here are some information that you must have in mind before using them:
-
+```diff
 There are 3 levels: 
 - Level 0 which corresponds to "No addiction"
 - Level 2 which corresponds to "Addiction without psychologic effect"
 - Level 1 which corresponds to "Addiction with psychologic effect"
+```
 
 For the model, there are multiple values in the payload. Here are the values and the default behaviour as well as how to enter the values on the payload:
 - Age
