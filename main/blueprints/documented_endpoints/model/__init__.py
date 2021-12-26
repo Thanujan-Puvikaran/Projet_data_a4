@@ -1,9 +1,11 @@
 from flask_restplus import Namespace, Resource, fields
+from numpy.core.fromnumeric import ndim
 from config import raiseError
 from mapping import defaultValue
 import pickle
 from flask import send_file
 from hook import find_file
+import pandas as pd
 
 namespace = Namespace("model", "Model related endpoints")
 
@@ -102,19 +104,19 @@ payload = namespace.model(
 
 
 @namespace.route("/knn")
-class model(Resource):
+class knnModel(Resource):
     @namespace.doc(body=payload)
     @namespace.response(200, "Success")
     def post(self):
         """Predict the class of the consumer with knn method"""
         try:
-            output_payload = defaultValue(payload=namespace.payload, flag=False)
+            payload = defaultValue(payload=namespace.payload, flag=False)
             knn_filename = "../model/knn.pkl"
             with open(knn_filename, "rb") as file:
                 knn_model = pickle.load(file)
-            output = {"response": output_payload.value}
-            # output = {"response": output_payload.value, "model": knn_model}
-            # payload = defaultValue(payload=namespace.payload, flag=True)
+            payload = pd.DataFrame(payload.value, index=["0"])
+            pred = knn_model.predict(payload)
+            output = {"response": pred[0]}
             return output
         except Exception as e:
             if raiseError.JSONERROR in e.__str__():
@@ -124,7 +126,7 @@ class model(Resource):
 
 
 @namespace.route("/knn/elbow")
-class knn_elbow(Resource):
+class knnElbow(Resource):
     @namespace.response(200, "Success")
     def get(self):
         """ Get elbow method graph for the knn clustering """
@@ -133,11 +135,44 @@ class knn_elbow(Resource):
 
 
 @namespace.route("/knn/confusion_matrix")
-class number_drug(Resource):
+class knnConfusion_matrix(Resource):
     @namespace.response(200, "Success")
     def get(self):
         """ Get the Confusion Matrix for the knn method """
         TRUE_PATH = find_file(
             fullname="ConfusionMatrixKnn", extension=".png", path="../image/",
+        )
+        return send_file(TRUE_PATH, cache_timeout=2)
+
+
+@namespace.route("/svc")
+class svcModel(Resource):
+    @namespace.doc(body=payload)
+    @namespace.response(200, "Success")
+    def post(self):
+        """Predict the class of the consumer with svc method"""
+        try:
+            payload = defaultValue(payload=namespace.payload, flag=False)
+            svc_filename = "../model/svc.pkl"
+            with open(svc_filename, "rb") as file:
+                svc_model = pickle.load(file)
+            payload = pd.DataFrame(payload.value, index=["0"])
+            pred = svc_model.predict(payload)
+            output = {"response": pred[0]}
+            return output
+        except Exception as e:
+            if raiseError.JSONERROR in e.__str__():
+                return {"response": {"error": raiseError.JSONMESSAGE}}
+            elif raiseError.TYPEERROR in e.__str__():
+                return {"response": {"error": raiseError.TYPEMESSAGE}}
+
+
+@namespace.route("/svc/confusion_matrix")
+class svcConfusion_matrix(Resource):
+    @namespace.response(200, "Success")
+    def get(self):
+        """ Get the Confusion Matrix for the svc method """
+        TRUE_PATH = find_file(
+            fullname="ConfusionMatrixSvc", extension=".png", path="../image/",
         )
         return send_file(TRUE_PATH, cache_timeout=2)
