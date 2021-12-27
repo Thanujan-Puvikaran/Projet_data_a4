@@ -45,11 +45,7 @@ The post knn will help you predict whether the given person is addicted or not a
 - Indeed if you use the get/model/knn/confusion_matrix and get/model/svc/confusion_matrix, you can see that svc is more accurate.
 ```
 
-![attention](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/attention.png?raw=false)
-
 <p float="left">
-  <img src="image/attention.png" width="100" />
-  <img src="image/attention.png" width="100" /> 
   <img src="image/attention.png" width="100" />
 </p>
 
