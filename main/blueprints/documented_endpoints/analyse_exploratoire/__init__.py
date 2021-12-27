@@ -19,6 +19,17 @@ class target_composition(Resource):
         return send_file(TRUE_PATH, cache_timeout=2)
 
 
+@namespace.route("/histogram")
+class drug_composition(Resource):
+    @namespace.response(200, "Success")
+    def get(self):
+        """ Get an histogram which shows volumetry of drug in function of the type of drug """
+        TRUE_PATH = find_file(
+            fullname="DrugHistogram", extension=".png", path="../image/",
+        )
+        return send_file(TRUE_PATH, cache_timeout=2)
+
+
 @namespace.route("/boxplot/addiction/education")
 class Education_vs_Target(Resource):
     @namespace.response(200, "Success")

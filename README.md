@@ -38,6 +38,8 @@
         - get/filtering/boxplot/drugs/ascore
         - get/filtering/boxplot/drugs/impulsiveness
         - get/filtering/boxplot/drugs/ss
+        - get/filtering/pieplot
+        - get/filtering/histogram
     model:
         - post/model/knn
         - get/model/knn/confusion_matrix

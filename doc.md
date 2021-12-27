@@ -44,6 +44,12 @@ The post knn will help you predict whether the given person is addicted or not a
 - Among the models, the best one is SVC. 
 - Indeed if you use the get/model/knn/confusion_matrix and get/model/svc/confusion_matrix, you can see that svc is more accurate.
 ```
+
+![attention](https://www.fcg.bzh/wp-content/uploads/2019/11/attention-hi.png)
+## If you have an issue with the post endpoints with the following message: "failed to fetch ...". Please retry at least 4 times till it works. If it is still not working please contact us: 
+    - thomas.osorio@edu.devinci.fr
+    - thanujan.puvikaran@edu.devinci.fr 
+    
 ### For each model, here are some information that you must have in mind before using them:
 
 ```diff
