@@ -46,6 +46,13 @@ The post knn will help you predict whether the given person is addicted or not a
 ```
 
 ![attention](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/attention.png?raw=false)
+
+<p float="left">
+  <img src="image/attention.png" width="100" />
+  <img src="image/attention.png" width="100" /> 
+  <img src="image/attention.png" width="100" />
+</p>
+
 ## If you have an issue with the post endpoints with the following message: "failed to fetch ...". Please retry at least 4 times till it works. If it is still not working please contact us: 
     - thomas.osorio@edu.devinci.fr
     - thanujan.puvikaran@edu.devinci.fr 
