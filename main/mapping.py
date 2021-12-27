@@ -338,6 +338,8 @@ class defaultValue:
 
     def check(self, dic, key):
         lstkey = list(dic.keys())
+        if key == 0:
+            return 0
         if key < int(lstkey[0]):
             return dic[str(lstkey[0])]
         if key > int(lstkey[len(lstkey) - 1]):
