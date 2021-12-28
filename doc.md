@@ -44,12 +44,42 @@ The post knn will help you predict whether the given person is addicted or not a
 - Among the models, the best one is SVC. 
 - Indeed if you use the get/model/knn/confusion_matrix and get/model/svc/confusion_matrix, you can see that svc is more accurate.
 ```
+## HOW TO USE THE MODEL ?
+
+After running the command that helps you to have the web page up and running, you need to go to any of the following endpoints:
+
+| MODEL           | IMAGE                      |
+| :-------------: | :------------------------: |
+|    KNN          | ![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnn.png?raw=false)              |
+|    SVC          | https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postSvc.png?raw=false             |
+
+Then click on it. After what you'll see a button try it out click on it.
+
+![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnntryitout.png?raw=false)
+
+Then change the value of the payload. 
+
+![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnnpayload.png?raw=false)
+
+You can find a description of the model by clicking on:
+
+![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnnmodel.png?raw=false)
+
+To find a description of the variables:
+
+![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnndescription.png?raw=false)
+
+Then you only need to wait.       
+
+![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnnresult.png?raw=false)
+
+
 ----------------------------------------------------------
 <p float="left">
   <img src="image/attention.png" width="100" />
 </p>
 
-## If you have an issue with the post endpoints with the following message: "failed to fetch ...". Please retry at least 4 times till it works. If it is still not working please contact us: 
+### If you have an issue with the post endpoints with the following message: "failed to fetch ...". Please retry at least 4 times till it works. If it is still not working please contact us: 
     - thomas.osorio@edu.devinci.fr
     - thanujan.puvikaran@edu.devinci.fr 
 ----------------------------------------------------------
@@ -58,11 +88,11 @@ The post knn will help you predict whether the given person is addicted or not a
 ```diff
 There are 3 levels: 
 - Level 0 which corresponds to "No addiction"
-- Level 2 which corresponds to "Addiction without psychologic effect"
-- Level 1 which corresponds to "Addiction with psychologic effect"
+- Level 2 which corresponds to "Addiction without psychologic effect", it means that there is no violent behavior from the person
+- Level 1 which corresponds to "Addiction with psychologic effect", it means that the person is violent
 ```
 
-#### For the model, there are multiple values in the payload. Here are the values and the default behaviour as well as how to enter the values on the payload:
+#### For the model, there are multiple values in the payload. Here are the values and the default behaviour as well as how to enter the values in the payload:
 - Age
     - it is an integer
     - the minimum is set to 18
