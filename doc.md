@@ -51,7 +51,7 @@ After running the command that helps you to have the web page up and running, yo
 | MODEL           | IMAGE                      |
 | :-------------: | :------------------------: |
 |    KNN          | ![](https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postKnn.png?raw=false)              |
-|    SVC          | https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postSvc.png?raw=false             |
+|    SVC          | ![]https://github.com/Thanujan-Puvikaran/Projet_data_a4/blob/main/image/postSvc.png?raw=false             |
 
 Then click on it. After what you'll see a button try it out click on it.
 
