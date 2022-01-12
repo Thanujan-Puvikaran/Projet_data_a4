@@ -9,6 +9,7 @@
         - python main.py
         
     2. For windows machine 
+        - git clone git@github.com:Thanujan-Puvikaran/Projet_data_a4.git
         - The easier way is to run the batch.bat file (on windows only)
         using:
             - with bash environment: bash batch.sh
