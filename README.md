@@ -2,6 +2,8 @@
 
 ##### - The command that you must use if you want to run the API:
     1. For any machine:
+        - git clone git@github.com:Thanujan-Puvikaran/Projet_data_a4.git
+        - cd Projet_data_a4
         - pip install -r requirements.txt
         - cd main
         - python main.py
